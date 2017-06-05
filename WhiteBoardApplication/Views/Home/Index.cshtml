@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div style="width:980px;margin:0 auto" class="section" id="literally-canvas">
+    <!--Script references. -->
+    <!--Reference the jQuery library. -->
+    <!--<script src="Scripts/jquery-3.1.1.min.js"></script>-->
+  
+
+    <h1 class="success">Collaborative White Board</h1>
+
+    <div style="display:none" id="myscreenshot">
+        @ViewBag.myscreenshot
+
+    </div>
+    <h4 style="color:red" id="displayname"></h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+            
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="row">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            
+                            <div class="col-md-2">
+                                <input type="text" style="display:none" id="txtMessage" />
+                                <input type="button" class="btn-primary form-control" id="btnSaveScreenShot" value="Share with Friends" />
+                                <br />
+                              
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" value="" id="linkURL" />
+                            </div>
+                            <div class="col-md-4">
+                                <span id="spanName" style="display:none" class="text-left alert alert-success"></span>
+                                <input type="text" class="form-control" style="display:none" id="txtUserName" />
+                            </div>
+                        
+                            <div class="col-md-2">
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <b>Active Mode:</b>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="button" id="btnRealTime" class="form-control btn-primary" value="Real Time" />
+                                (Click on Button to Toggle)
+                            </div> 
+                            <div class="col-md-2">
+                                <input type="button" class="form-control btn-primary" value="Send" style="display:none;" id="btnSendScreenShot" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </div>
+        <div class="row">
+            <div id="myControl" class="my-drawing"></div>
+        </div>
+    </div>
+    <input type="hidden" id="txtIsRealTime" value="1" />
+</div>
